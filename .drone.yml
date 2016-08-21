@@ -1,0 +1,21 @@
+pipeline:
+  build:
+    image: armhfbuild/golang:1.6-alpine
+    environment:
+      - CGO_ENABLED=0
+    commands:
+      - export OUTPUT_PATH=${PWD}
+      - apk add --no-cache git
+      - git clone https://github.com/drone-plugins/drone-git $GOPATH/src/github.com/drone-plugins/drone-git
+      - cd $GOPATH/src/github.com/drone-plugins/drone-git
+      - go vet
+      - go test -cover -coverprofile=coverage.out
+      - go build -ldflags "-s -w -X main.build=$DRONE_BUILD_NUMBER" -a -tags netgo
+      - cp drone-git ${OUTPUT_PATH}
+
+  docker:
+    repo: armswarmdrone/git
+    tag: ["latest"]
+    when:
+      branch: master
+      event: push
