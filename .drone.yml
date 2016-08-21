@@ -5,7 +5,7 @@ pipeline:
       - CGO_ENABLED=0
     commands:
       - export OUTPUT_PATH=${PWD}
-      - apk add --no-cache git
+      - apk add --no-cache ca-certificates git openssh curl perl
       - git clone https://github.com/drone-plugins/drone-git $GOPATH/src/github.com/drone-plugins/drone-git
       - cd $GOPATH/src/github.com/drone-plugins/drone-git
       - go vet
