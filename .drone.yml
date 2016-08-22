@@ -19,3 +19,7 @@ pipeline:
     when:
       branch: master
       event: push
+
+  slack:
+    when:
+      status: [ failure, success ]
