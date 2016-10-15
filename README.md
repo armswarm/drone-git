@@ -1,5 +1,5 @@
 # drone-git
-[![](https://images.microbadger.com/badges/image/armswarmdrone/git.svg)](https://microbadger.com/images/armswarmdrone/git "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/armswarmdrone/git.svg)](https://microbadger.com/images/armswarmdrone/git "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/commit/armswarmdrone/git.svg)](https://microbadger.com/images/armswarmdrone/git "Get your own commit badge on microbadger.com") [![Build Status](https://drone.veiled.land/api/badges/armswarmdrone/git/status.svg)](https://drone.veiled.land/armswarmdrone/git)
+[![](https://images.microbadger.com/badges/image/armswarmdrone/git.svg)](https://microbadger.com/images/armswarmdrone/git "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/armswarmdrone/git.svg)](https://microbadger.com/images/armswarmdrone/git "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/commit/armswarmdrone/git.svg)](https://microbadger.com/images/armswarmdrone/git "Get your own commit badge on microbadger.com") [![Build Status](https://drone.veiled.land/api/badges/armswarm/drone-git/status.svg)](https://drone.veiled.land/armswarm/drone-git)
 
 This builds the git drone plugin for ARM.
 
