@@ -1,4 +1,4 @@
-FROM quay.io/armswarm/alpine:3.4
+FROM quay.io/armswarm/alpine:3.5
 
 RUN apk add --no-cache \
     ca-certificates \
