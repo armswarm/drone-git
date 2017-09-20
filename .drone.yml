@@ -6,7 +6,7 @@ workspace:
 
 clone:
   git:
-    image: armswarmdrone/git
+    image: quay.io/armswarm/drone-git
 
 pipeline:
   build:
@@ -22,14 +22,17 @@ pipeline:
       - go build -ldflags "-s -w -X main.build=$DRONE_BUILD_NUMBER" -a -tags netgo -o "${PACKAGE##*/}" "${PACKAGE}"
 
   publish:
-    image: armswarmdrone/docker
+    image: quay.io/armswarm/drone-docker
     repo: quay.io/armswarm/drone-git
-    tag: [ "1.2", "1", "latest" ]
+    tag: [ "latest" ]
+    secrets: [ docker_username, docker_password, docker_registry ]
     when:
       branch: master
       event: push
 
   notify:
-    image: armswarmdrone/slack
+    image: quay.io/armswarm/drone-slack
+    secrets: [ slack_webhook, docker_password, docker_registry ]
+
     when:
       status: [ failure, success ]
