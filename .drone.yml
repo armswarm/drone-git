@@ -12,7 +12,6 @@ pipeline:
   build:
     image: quay.io/armswarm/golang:1.8-alpine
     environment:
-      - CGO_ENABLED=0
       - PACKAGE=github.com/drone-plugins/drone-git
     commands:
       - echo "$${PACKAGE}"
@@ -24,7 +23,7 @@ pipeline:
   publish:
     image: quay.io/armswarm/drone-docker
     repo: quay.io/armswarm/drone-git
-    tag: [ "latest" ]
+    tag: [ "1.3", "1", "latest" ]
     secrets: [ docker_username, docker_password, docker_registry ]
     when:
       branch: master
