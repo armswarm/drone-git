@@ -1,5 +1,12 @@
 # drone-git
 
+---
+**NOTE:**
+
+**This repository has been archived. For most official plugins, there are images for arm architectures [here](https://hub.docker.com/u/plugins).**
+
+---
+
 [![Docker Repository on Quay](https://quay.io/repository/armswarm/drone-git/status "Docker Repository on Quay")](https://quay.io/repository/armswarm/drone-git)
 
 This builds the git drone plugin for ARM.
